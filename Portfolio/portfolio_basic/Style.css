@@ -1,0 +1,362 @@
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+.header
+{
+	background: url(images/pic.jpeg);
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; 
+}
+
+.navbar
+{
+	text-align: center;
+	padding: 10px;
+}
+
+.navbar a
+{
+	text-decoration: none;
+	color: #fff;
+	font-size: 50px;
+	font-family: Tahoma;
+	margin-right: 80px;
+	border: 2px solid transparent;
+	padding: 10px;
+	transition: 0.3s;
+}
+
+.navbar a:hover
+{
+	background: #000;
+	border: 2px solid #fff;
+
+}
+
+.head-content
+{
+	text-align: center;
+}
+
+.head-content img
+{
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin-top: 20px;
+}
+.head-content img:hover
+{
+	border: 2px solid #000;
+}
+
+.name
+{
+	cursor: pointer;
+	font-size: 50px;
+	color: #fff;
+	font-family: Algerian;
+}
+
+.desc
+{
+	cursor: default;
+	font-size: 35px;
+	color: #fff;
+	font-family: Harlow solid;
+}
+
+/* Add margin to create spacing between sections */
+.head-content.about-section,
+.skills-section,
+.Project-section,
+.contact-section,
+.copyright {
+    margin-bottom: 30px; /* Adjust this value as needed */
+}
+
+/* Add padding to create spacing within sections */
+.head-content.about-section,
+.skills-section,
+.Project-section,
+.contact-section,
+.copyright {
+    padding: 20px; /* Adjust this value as needed */
+}
+
+
+
+.about-section
+{
+	width: 100%;
+	height: 300px;
+	background: #3bb900;
+	text-align: center;
+}
+.about-section h2
+{
+	text-align: center;
+	font-size: 40px;
+	font-family: sans-serif;
+	text-decoration: underline;
+
+}
+
+.about-section p
+{
+	font-size: 40px;
+	font-family: roboto;
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+	border: 0px solid #48bc00;
+	padding: 35px;
+}
+
+.skills-section
+{
+	width: 100%;
+	height: 600px;
+	background: #c20eaa;
+	text-align: center;
+}
+
+.skills-section
+{
+	text-decoration: underline;
+	font-size: 30px;
+	font-family: sans-serif;
+	padding: 35px;
+}
+
+.skills-section img
+{
+	height: 150px;
+	width: 150px;
+	border: 2px solid transparent;
+	border-radius: 100%;
+}
+
+.skills-section img:hover
+{
+	border: 1px solid #ffffff;
+	transition: 0.3s;
+}
+.Project-section
+{
+	width: 100%;
+	background: #90ad0f;
+	text-align: center;
+}
+.Project-section h2
+{
+	text-align : center;
+	font-size: 40px;
+	font-family: sans-serif;
+	text-decoration: underline;
+
+}
+
+.Project-section p
+{
+	font-size: 40px;
+	font-family: roboto;
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+	border: 0px solid #fff;
+	padding: 25px;
+}
+/* Add this CSS to Style.css or your CSS file */
+.skills-projects {
+    text-align: center; /* Center-align the skill buttons */
+}
+
+.skill-button {
+    background-color: rgb(3, 176, 0); /* Set the initial background color */
+    color: black; /* Set the initial text color */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block; /* Display buttons in a row */
+}
+
+.skill-button.open {
+    background-color: rgb(69, 16, 144); /* Set the background color when open */
+    color: rgb(213, 221, 224); /* Set the text color when open */
+}
+
+.project-details {
+    display: none;
+    background-color: rgb(8, 148, 182); /* Set the background color of project details */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left; /* Align project details text to the left */
+    margin-top: 5px;
+}
+
+.project-details.open {
+    display: block;
+}
+
+
+.contact-section
+{
+    height: 56vh;
+    background: rgb(213, 16, 16);
+    text-align: center;
+    display: 500px;
+	text-align: center;
+	margin: 0 auto;
+	border: 0px solid #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-section p
+{
+	font-size: 25px;
+}
+
+.contact-section span
+{
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.social-links-vertical
+{
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-links-vertical a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #eae313; /* Set the background color of the buttons */
+    color: #000; /* Set the color of the platform names to transparent */
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    width: 200px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-links-vertical a img
+{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.social-links-vertical a:hover
+{
+    background: #000000;
+    color: #ffffff; /* Change the color of platform names on hover */
+}
+
+
+.copyright
+{
+	background: rgb(128, 128, 128);
+	font-size: 20px;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+	cursor: default;
+}
+
+.toggle
+{
+	width: 30px;
+	padding: 10px;
+	float: right;
+	background: gray;
+	border-radius: 10px;
+	margin: 6px;
+	cursor: pointer;
+	display: none;
+}
+
+
+.toggle span
+{
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	display: block;
+	margin-bottom: 3px;
+}
+
+
+@media(max-width: 768px)
+{
+	.toggle
+	{
+		display: block;
+		position: fixed;
+	}
+	.navbar
+	{
+		display: none;
+	}
+	.navbar a
+	{
+		display: block;
+		text-align: center;
+		padding: 10px;
+	}
+	.about-section p
+{
+	width: 98%;
+	padding: 0;
+	font-size: 20px;
+
+}
+.skills-section img
+{
+	height: 110px;
+	width: 110px;
+	display: block;
+	margin: 0 auto;
+}
+.inp-name, .inp-mail, .inp-msg
+{
+	width: 95%;
+}
+}
+
+@media (max-width: 350px)
+{
+	.head-content img
+	{
+		width: 90%;
+	}
+	.name
+	{
+		font-size: 30px;
+	}
+}

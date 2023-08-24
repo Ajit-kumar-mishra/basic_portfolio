@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<title>Ajit kumar mishra </title>
+</head>
+<body>
+	<div class="toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="container">
+		<div class="header">
+			<div class="navbar">
+				<a href="#">Home</a>
+				<a href="#about">About Me</a>
+				<a href="#skills">Skills</a>
+				<a href="#contact">Contact</a>
+				<a href="#Project">Project</a>
+			</div>
+			<div class="head-content">
+			<img src="images/ajit.jpg" height="400px" width="400px">
+			<p class="name">Ajit kumar mishra</p>
+			<p class="desc">Data engineer</p>
+		</div>
+		</div>
+		<div class="about-section" id="about">
+			<h2>About Me</h2>
+			<p> my name is ajit kumar mishra this is enough explanation for my introduction after some years.</p>
+	</div>
+	<br>
+	<div class="skills-section" id="skills">
+		<h2>Skills</h2>
+		<img src="images/html.png" height="10px" width="10px">
+		<img src="images/css.png"height="10px" width="10px">
+		<img src="images/js.png"height="10px" width="10px">
+		<img src="images/C.jpeg"height="10px" width="10px">
+		<img src="images/c++.jpeg"height="10px" width="10px">
+		<img src="images/python.jpeg"height="10px" width="10px">
+		<img src="images/MY_SQL.jpeg"height="10px" width="10px">
+		<img src="images/SQL.jpeg"height="10px" width="10px">
+	</div>
+
+	<div class="Project-section" id="Project">
+		<h2>Projects</h2>
+		<p>I have completed various projects.</p>
+		<div class="skills-projects">
+			<div class="skill-project" data-skill="html">
+				<button class="skill-button">HTML Projects</button>
+				<div class="project-details" id="project-details-html">
+					<!-- Content of HTML projects here -->
+					<p>Project 1: Resume Templates</p>
+					<p>Project 2: College website </p>
+					<p>Project 3: Portfolio</p>
+				</div>
+			</div>
+			<div class="skill-project" data-skill="css">
+				<button class="skill-button">CSS Projects</button>
+				<div class="project-details" id="project-details-css">
+					<!-- Content of CSS projects here -->
+					<p>Modify the Appearance of a Form </p>
+                    <p>Boost a Website's Performance</p>
+                    <p>Animation of the Solar System</p>
+				</div>
+			</div>
+			<!-- Add similar blocks for other skills -->
+			<div class="skill-project" data-skill="python">
+				<button class="skill-button">Python Projects</button>
+				<div class="project-details" id="project-details-python">
+					<!-- Content of Python projects here -->
+					<p>I have completed more than 60 projects on python language</p>
+					<p> I have mention only few</p>
+					<p>Project 1: Turtle Game</p>
+					<p>Project 2: Pong Game</p>
+					<p>Project 3: Rain Alert message using API </p>
+					<p>Project 4: Stock Market Up Down message using API </p>
+					<p>Project 5: Instagram  Follower Boat</p>
+				</div>
+			</div>
+			<div class="skill-project" data-skill="C">
+				<button class="skill-button">C-C++ Projects</button>
+				<div class="project-details" id="project-details-C">
+					<p>Project 1: Cricket game</p>
+					<p>Project 2: Rock paper scissors</p>
+					<p>Project 3: Digital Watch</p>
+				</div>
+			</div>
+			<div class="skill-project" data-skill="sql">
+				<button class="skill-button">SQL Projects</button>
+				<div class="project-details" id="project-details-sql">
+					<!-- Content of SQL projects here -->
+					<p> I am studying now </p>
+				</div>
+			</div>
+			<!-- Add more skill projects as needed -->
+		</div>
+	</div>
+	
+	<div class="contact-section" id="contact">
+		<span>Contact</span>
+		<div class="contact-info">
+			<p><b>You can reach out to me via :</b></p>
+			<div class="social-links-vertical">
+				<a href="https://twitter.com/'your_user_name'">Twitter</button></a>
+				<a href="https://instagram.com/'user_name'">Instagram</button></a>
+				<a href="http://www.facebook.com/'user_name'">Facebook</button></a>
+				<a href="https://github.com/Ajit-kumar-mishra">GitHub</button></a>
+				<a href="https://www.linkedin.com/in/'your_username'">LinkedIn</button></a>
+				<!-- Add more social media links as needed -->
+			</div>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<p>Ajit kumar mishra &copy; 2023</p>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".toggle").click(function(){
+            $(".navbar").slideToggle();
+        });
+
+        // Add this part to handle skill button clicks and show/hide project details
+        $(".skill-button").click(function() {
+            const skill = $(this).parent().data("skill");
+            const projectDetails = $(`#project-details-${skill}`);
+
+            if (projectDetails.hasClass("open")) {
+                projectDetails.removeClass("open");
+                $(this).removeClass("open");
+            } else {
+                $(".project-details").removeClass("open");
+                $(".skill-button").removeClass("open");
+                projectDetails.addClass("open");
+                $(this).addClass("open");
+            }
+        });
+
+        $(window).resize(function(){
+            if($(window).width()>768) {
+                $('.navbar').show();
+            } else {
+                $('.navbar').hide();
+            }
+        });
+    });
+</script>
+
+
+</html>
